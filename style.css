@@ -1,0 +1,239 @@
+/* PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* HEADER */
+.header {
+    background-color: #155e9b;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header p {
+    margin-bottom: 0;
+}
+
+/* MENU NAVIGASI */
+.navbar {
+    background-color: #103f66;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #287bb8;
+}
+
+/* LAYOUT UTAMA */
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* ARTIKEL */
+.content,
+.sidebar {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    min-width: 0;
+}
+
+/* FOTO PROFIL DAN IDENTITAS */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #155e9b;
+}
+
+.identitas {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.identitas h2 {
+    color: #155e9b;
+    margin-top: 0;
+}
+
+.identitas p {
+    margin: 5px 0;
+}
+
+/* SETIAP SECTION */
+.section {
+    padding: 20px 0;
+    border-bottom: 1px solid #dddddd;
+    scroll-margin-top: 15px;
+}
+
+.section h2,
+.sidebar h2 {
+    color: #155e9b;
+    margin-top: 0;
+}
+
+.section h3 {
+    color: #333333;
+}
+
+/* TABEL BIODATA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: #e8f2fa;
+    width: 42%;
+}
+
+/* VIDEO */
+.video {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 8px;
+    background-color: #222222;
+}
+
+/* GALERI FOTO */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.galeri img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* TOMBOL DOWNLOAD */
+.tombol-download {
+    display: inline-block;
+    background-color: #155e9b;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.tombol-download:hover {
+    background-color: #103f66;
+}
+
+/* SIDEBAR */
+.sidebar {
+    overflow-wrap: anywhere;
+}
+
+.sidebar a {
+    color: #155e9b;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #103f66;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 25px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 15px auto;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .content,
+    .sidebar {
+        padding: 16px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foto-profil {
+        width: 140px;
+        height: 160px;
+    }
+
+    .galeri {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .galeri img {
+        height: 130px;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+  }
+  
